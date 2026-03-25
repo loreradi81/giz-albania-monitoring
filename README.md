@@ -1,21 +1,39 @@
-README 
+# GIZ Albania Monitoring Dashboard
 
-All required source files, documentation, and validation materials for the suggested GIZ Albania Data Monitoring are included in this submission.
+ETL pipeline and monitoring dashboard built for GIZ Albania (April 2025).
 
-Materials Included:
-The Monitoring Dashboard for GIZ Albania (in PDF format)
-The Monitoring Dashboard for GIZ Albania (in PowerPoint.pptx file)
-A Python script for cleaning, combining, and validating data (python_script_loren_radi)
-The original database sample (sample_db.xlsx)
+## Overview
+End-to-end data pipeline that loads, cleans, and structures monitoring data 
+from 8 source sheets, then visualises development impact across 4 megatrends 
+in IBM Cognos Analytics.
 
-Verification: The dataset has been appropriately cleaned, organized, and combined.
-Multi-value fields underwent normalization and explosion.
-Python scripts have been used to validate the data's integrity.
-The following fields were validated: municipality, donor, beneficiary, stakeholder, and indicator.
-The cleaned dataset was used to produce visualizations in IBM Cognos Analytics.
+## What this project does
+- Loads and merges 8 data sheets: indicators, municipalities, donors, 
+  beneficiaries, stakeholders, donor groups
+- Normalises and explodes multi-value fields (city_ids, donor_ids, 
+  stakeholder_ids) using Python/pandas
+- Validates data integrity across all key dimensions
+- Exports clean dataset (Excel + CSV) ready for BI tool ingestion
+- Produces 4-panel IBM Cognos dashboard tracking development impact 2023–2025
 
-Submission Date: [28.04.2025]
+## Key Insights from Dashboard
+- **Economic Resilience** showed strongest growth 2023–2024
+- **Livable Cities** declined continuously throughout 2023–2025
+- **Top donors**: UN Agency and Bilateral Donors lead contributions
+- **Top beneficiaries**: Social Groups (33.8%) and Governance & Administration (25.3%)
+- **Geographic focus**: Highest project concentration in Tirana, Shkodër, Durrës
 
-Best regards,  
-[Loren Radi]  
-[lorenradi@gmail.com]
+## Tools Used
+- Python · pandas · Jupyter Notebooks
+- IBM Cognos Analytics
+- Excel / CSV output
+
+## Files
+| File | Description |
+|------|-------------|
+| `python_script_loren_radi.ipynb` | ETL pipeline — data loading, merging, cleaning, export |
+| `GIZ Albania Monitoring Dashboard.pdf` | Final dashboard with insights |
+| `README.md` | Project documentation |
+
+## Author
+Loren Radi · [lorenradi@gmail.com](mailto:lorenradi@gmail.com)
